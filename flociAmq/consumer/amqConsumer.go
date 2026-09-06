@@ -13,7 +13,8 @@ func failOnError(err error, msg string) {
 }
 
 func main() {
-	conn, err := amqp.Dial("amqp://flociUser:flociPwd123456@localhost:4566/")
+	amqpURL := "amqp://flociUser:flociPwd123456@localhost:5672/"
+	conn, err := amqp.Dial(amqpURL)
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
 
