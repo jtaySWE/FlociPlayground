@@ -5,3 +5,8 @@ services:
       - "4566:4566"
     env_file:
       - .env
+  
+  floci-ui:
+    image: floci/floci-ui:latest
+    ports:
+      - "4500:4500"
