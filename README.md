@@ -5,11 +5,5 @@ Using golang or any language to interact with any floci AWS services such as rab
 
 # Setting up proxy to connect to amazon mq broker on docker
 
-```
-docker run -d --name floci-amqp-proxy \
-  --network flociplayground_default \
-  -p 5672:5672 \
-  alpine/socat \
-  TCP-LISTEN:5672,fork,reuseaddr \
-  TCP:<broker-container>:5672
-```
+After creating the amazon mq broker from terraform run 
+./start-rabbitmq-proxy.sh
