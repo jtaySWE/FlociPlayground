@@ -33,5 +33,6 @@ provider "aws" {
     ssm            = var.localEndpoint
     sts            = var.localEndpoint
     mq             = var.localEndpoint
+    elasticache    = var.localEndpoint
   }
 }
